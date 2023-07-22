@@ -40,9 +40,6 @@ function search(nums: number[], target: number): number {
         middle = Math.floor((lower + high) / 2);
         value = nums[middle];
 
-        console.log("Value" + value);
-        console.log("Lower" + lower);
-
         if(value == target)
             return middle;
         if(value < target)
