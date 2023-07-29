@@ -1,3 +1,43 @@
+### Binary Search
+
+Binary search is a searching algorithm, it takes a **sorted list** as input of elements and a target. If an element you’re
+looking for is in that list, binary search returns the position where it’s located. Otherwise, binary search returns null or -1 .
+
+Sample java code
+
+```java
+public static int binarySearch(arr int[], target int) {
+
+  if(arr.lenght == 0)
+    return -1;
+
+  int low = 0;
+  int high = arr.length - 1;
+
+  while(low <= while) {
+    int mid = Math.floor((low + high) / 2);
+    int midValue = arr[mid];
+
+    if(midValue == target)
+      return mid;
+    if(midValue > target)
+      high = mid - 1;
+    else
+      low = mid + 1;
+  }
+
+  return -1;
+}
+````
+
+Step to step explanation
+
+<p align="center">
+  <img src="https://github.com/bozzelliandrea/grokking-algorithms/assets/74464364/e2f4fc95-b10c-4426-95fe-f7a7934e6621" />
+</p>
+
+### Big O
+
 ### Exercises: Question and Answer
 
 #### 1.1 
@@ -52,4 +92,12 @@ answer—you may be surprised!)
 A: Still O(n), because we dont know how many A surname in the phone book we have, so we need to use linear search until we find the first B.
 
   let's take all the alphabet letters, 26, so it could be O(n/26) but big O ignore any constant operations, so O(n).
+
+### Recap
+• Binary search is a lot faster than simple search.
+• O(log n) is faster than O(n), but it gets a lot faster once the list of
+items you’re searching through grows.
+• Algorithm speed isn’t measured in seconds.
+• Algorithm times are measured in terms of growth of an algorithm.
+• Algorithm times are written in Big O notation.
 
