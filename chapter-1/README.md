@@ -38,6 +38,18 @@ Step to step explanation
 
 ### Big O
 
+BigO notation is a special notation used to calculate algorithm running time, it doesen't use constant values (only the 1 for the constat time/space complexity) and it's used to specify the **worst** case scenario.
+
+#### Some common Big O run times
+Here are five Big O run times that you’ll encounter a lot, sorted from
+fastest to slowest:
+
+- O(log n), also known as log time. Example: Binary search.
+- O(n), also known as linear time. Example: Simple search.
+- O(n * log n). Example: A fast sorting algorithm, like quicksort.
+- O(n2). Example: A slow sorting algorithm, like selection sort.
+- O(n!). Example: A really slow algorithm, like the traveling salesperson.
+
 ### Exercises: Question and Answer
 
 #### 1.1 
