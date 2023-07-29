@@ -7,6 +7,7 @@
 |-----------|:-------------:|:------:|
 | Reading   |  O(1)         | O(N)   |
 | Insertion |    O(N)       | O(1)   |
+| Deletion |    O(N)       | O(1)   |
 
 * if we don't save the linked list tail, insert/remove at the end of a linked list would be O(n)
 * insert/remove from the middle of array and a linked list would be the same, O(n)
