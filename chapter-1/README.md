@@ -1,3 +1,5 @@
+# Chapter 1 - Introduction to Algorithms
+
 ### Binary Search
 
 Binary search is a searching algorithm, it takes a **sorted list** as input of elements and a target. If an element you’re
