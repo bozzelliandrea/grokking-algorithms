@@ -11,9 +11,16 @@
 
 * if we don't save the linked list tail, insert/remove at the end of a linked list would be O(n)
 * insert/remove from the middle of array and a linked list would be the same, O(n)
+* deletions are O(1) time only if you can instantly access the element to be deleted
 
 
 #### Linked List
+
+Every node of a linkedlist has a value and a pointer to the next node.
+
+-  Insertion: create a new node, and point the previous to the new one.
+-  Deletion: find the node, and connect the previous to the next one (previous.next = previous.next.next), if the node is the last, just set previous.next = null
+
 implementation in Java
 
 ```java
@@ -142,3 +149,13 @@ Tips. you don't need binary search, just use ASCII conversion '<your_char>' - 'a
 Inserting is faster than arrays, same amount of time as linked lists.
 
 ## Selection Sort
+
+Time complexity O(n^2) 
+
+On average, you check a list that has 1/2 × n elements. The runtime is O(n × 1/2 × n). But constants like 1/2 are ignored in Big O notation (again, see chapter 4 for the full discussion), so you just write O(n × n) or O(n2).
+
+
+<p align="center">
+  <img src="https://github.com/bozzelliandrea/grokking-algorithms/assets/74464364/06e5213f-bc00-46c7-bd2b-715c2af8d6c5" />
+</p>
+
