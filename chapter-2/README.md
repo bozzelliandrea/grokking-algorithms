@@ -159,3 +159,13 @@ On average, you check a list that has 1/2 × n elements. The runtime is O(n × 1
   <img src="https://github.com/bozzelliandrea/grokking-algorithms/assets/74464364/06e5213f-bc00-46c7-bd2b-715c2af8d6c5" />
 </p>
 
+Recap
+• Your computer’s memory is like a giant set of drawers.
+• When you want to store multiple elements, use an array or a list.
+• With an array, all your elements are stored right next to each other.
+• With a list, elements are strewn all over, and one element stores
+the address of the next one.
+• Arrays allow fast reads.
+• Linked lists allow fast inserts and deletes.
+• All elements in the array should be the same type (all ints,
+all doubles, and so on).
