@@ -12,6 +12,11 @@ push => add a new item to the top
 pop => remove the topmost item and return int
 peek => read the topmost value without removing it
 
+
+Tips:
+
+LinkedList based vs Array based Stack or Queue data structure: https://stackoverflow.com/questions/7477181/array-based-vs-list-based-stacks-and-queues
+
 ### Exercises: Question and Answer
 
 #### 3.1
