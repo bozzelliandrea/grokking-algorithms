@@ -1,6 +1,17 @@
 # Chapter 3 - Recursion
 
 
+### The Stack
+
+![image](https://github.com/bozzelliandrea/grokking-algorithms/assets/74464364/2659ce8b-5da8-4901-b9e7-6c4830a2c261)
+
+
+[Stack on Programiz](https://www.programiz.com/dsa/stack)
+
+push => add a new item to the top
+pop => remove the topmost item and return int
+peek => read the topmost value without removing it
+
 ### Exercises: Question and Answer
 
 #### 3.1
