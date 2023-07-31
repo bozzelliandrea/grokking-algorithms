@@ -1,5 +1,7 @@
 # Chapter 4 - Quicksort
 
+## Divide & Conquer
+
 ### Exercises: Question and Answer
 
 #### 4.1
@@ -185,3 +187,27 @@ assertBinarySearch(-1, binary_search(nums, 0, nums.length, 7));
 TimeComplexity: O(log n)
 SpaceComplexity: 0(log n) with recursion, we store state in memory during call stack, this is the main difference between iteration version of binary search which is O(1) SC
 
+## Big O Revisited
+
+#### 4.5
+Q: Printing the value of each element in an array.
+
+A: O(n) TC with linear search, O(1) SC
+
+#### 4.6
+Q: Doubling the value of each element in an array.
+
+A: O(n) with linear search, (we need to iterate every element and then doubling the value for each index) O(1) SC
+
+#### 4.7
+Q: Doubling the value of just the first element in an array.
+
+A: O(1) constant time, if array size is 0 then nothing to do, otherwise arr[0] * arr[0], also constant space complexity
+
+#### 4.8
+Q: Creating a multiplication table with all the elements in the array. So
+if your array is [2, 3, 7, 8, 10], you first multiply every element by 2,
+then multiply every element by 3, then by 7, and so on
+
+A: O(n^2) TC because we firstly iterate the array for find the multiply number, and then re-iterate the same array multiplying it by number in current index
+    Space Complexity is O(n) because we need to store extra space for the result array (we can't edit the input array in place or we lose the next multiplication values)
