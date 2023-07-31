@@ -20,7 +20,7 @@ function assertEquals(expected: number, actual: number[]): void {
 Write a function to sum an array of numbers using divide and conquer strategy
 
 first find a base case: empty array or array of size 1
-second find the recursive case: if array size > 1; then sum = n + sum(n - 1)
+second find the recursive case: increment by 1 + sum(n - 1)
 */
 
 function recrusive_sum(arr: number[]): number {
