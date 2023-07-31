@@ -209,5 +209,17 @@ Q: Creating a multiplication table with all the elements in the array. So
 if your array is [2, 3, 7, 8, 10], you first multiply every element by 2,
 then multiply every element by 3, then by 7, and so on
 
-A: O(n^2) TC because we firstly iterate the array for find the multiply number, and then re-iterate the same array multiplying it by number in current index
+A: O(n^2) TC because we firstly iterate the array for find the multiply number, and then re-iterate the same array multiplying it by number in current index <br/>
     Space Complexity is O(n) because we need to store extra space for the result array (we can't edit the input array in place or we lose the next multiplication values)
+
+#### Recap
+- D&C works by breaking a problem down into smaller and smaller
+pieces. If you’re using D&C on a list, the base case is probably an
+empty array or an array with one element.
+- If you’re implementing quicksort, choose a random element as the
+pivot. The average runtime of quicksort is O(n log n)!
+- The constant in Big O notation can matter sometimes. That’s why
+quicksort is faster than merge sort.
+- The constant almost never matters for simple search versus binary
+search, because O(log n) is so much faster than O(n) when your list
+gets big
