@@ -182,3 +182,6 @@ assertBinarySearch(6, binary_search(nums, 0, nums.length, 6));
 assertBinarySearch(0, binary_search(nums, 0, nums.length, 0));
 assertBinarySearch(-1, binary_search(nums, 0, nums.length, 7));
 ```
+TimeComplexity: O(log n)
+SpaceComplexity: 0(log n) with recursion, we store state in memory during call stack, this is the main difference between iteration version of binary search which is O(1) SC
+
