@@ -52,7 +52,7 @@ Delete the first occurence target inside the linkedlist
 
 @return linkedlist without the first occurence of rtarget value
 */
-function exercise_two<T>(source: T[], target: T): LinkedList<T> {
+function deleteOccurence<T>(source: T[], target: T, first: boolean = false): LinkedList<T> {
 
     let linkedlist: LinkedList<T> = new LinkedList();
 
@@ -73,9 +73,11 @@ function exercise_two<T>(source: T[], target: T): LinkedList<T> {
     while(head.next != null) {
         if(head.next.value == target) {
             head.next = head.next.next;
-            break;
+            if(first)
+                break;
         }
-        head = head.next;
+        else
+            head = head.next;
     }
 
     return linkedlist;
@@ -107,6 +109,9 @@ function assertLinkedList<T>(l1: LinkedList<T>, l2: LinkedList<T>): void {
     console.log("LISTS VALUES ARE EQUALS!");
 }
 
-assertLinkedList(exercise_two([1,2,3,4,1], 1), LinkedList.fromArray([2,3,4,1]));
-assertLinkedList(exercise_two([1,2,3,4,5,6,4,5,4], 4), LinkedList.fromArray([1,2,3,5,6,4,5,4]));
-assertLinkedList(exercise_two([1,2,3,4,5,6,4,5,4], 4), LinkedList.fromArray([1,2,3,4,5,6,4,5,4]));
+assertLinkedList(deleteOccurence([1,2,3,4,1], 1, true), LinkedList.fromArray([2,3,4,1]));
+assertLinkedList(deleteOccurence([1,2,3,4,5,6,4,5,4], 4, true), LinkedList.fromArray([1,2,3,5,6,4,5,4]));
+assertLinkedList(deleteOccurence([1,2,3,4,5,6,4,5,4], 4, true), LinkedList.fromArray([1,2,3,4,5,6,4,5,4]));
+
+assertLinkedList(deleteOccurence([1,2,3,4,5,6,4,5,4], 4), LinkedList.fromArray([1,2,3,5,6,5]));
+assertLinkedList(deleteOccurence([1,2,3,2,5,2,2,6,2], 2), LinkedList.fromArray([1,3,5,6]));
