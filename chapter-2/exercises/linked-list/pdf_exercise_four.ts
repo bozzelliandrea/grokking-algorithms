@@ -1,41 +1,4 @@
-class LinkedNode<T> {
-
-    value: T;
-    next: LinkedNode<T> | null;
-
-    constructor(value: T, next?: LinkedNode<T>) {
-        this.value = value;
-        this.next = next ?? null;
-    }
-
-    public static fromArray<T>(source: T[]): LinkedNode<T> {
-        let tmp: LinkedNode<T> = new LinkedNode(null);
-        let head = tmp;
-
-        for(let i = 0; i < source.length; i++) {
-            if(tmp.value == null) {
-                tmp.value = source[i]
-            } else {
-                tmp.next = new LinkedNode(source[i])
-                tmp = tmp.next;
-            }
-        }
-
-        return head;
-    }
-
-    public static toArray<T>(source: LinkedNode<T>) {
-        const array: T[] = [];
-
-        while(source != null) {
-            array.push(source.value);
-            source = source.next;
-        }
-
-        return array;
-    }
-}
-
+import LinkedNode from './linked-node';
 /*
 Remove the last target occurence from an input linkedlist 
 

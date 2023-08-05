@@ -1,66 +1,28 @@
-class LinkedNode<T> {
+import LinkedNode from "./linked-node";
 
-    value: T;
-    next: LinkedNode<T> | null;
+function findOccurenceList<T>(source: LinkedNode<T>, target: T): LinkedNode<number> {
+    let list: LinkedNode<number> = new LinkedNode();
+    const head = list;
+    let index: number = 0;
 
-    constructor(value?: T, next?: LinkedNode<T>) {
-        this.value = value ?? null;
-        this.next = next ?? null;
-    }
+    while(source != null) {
 
-    public static fromArray<T>(source: T[]): LinkedNode<T> {
-        let tmp: LinkedNode<T> = new LinkedNode(null);
-        let head = tmp;
-
-        for(let i = 0; i < source.length; i++) {
-            if(tmp.value == null) {
-                tmp.value = source[i]
-            } else {
-                tmp.next = new LinkedNode(source[i])
-                tmp = tmp.next;
+        if(source.value == target) {
+            if(list.value == null)
+                list.value = index;
+            else {
+                list.next = new LinkedNode(index);
+                list = list.next;
             }
         }
 
-        return head;
+        source = source.next;
+        index++;
     }
 
-    public static toArray<T>(source: LinkedNode<T>): T[] {
-        const array: T[] = [];
-
-        while(source != null && source.value != null) {
-            array.push(source.value);
-
-            source = source.next;
-        }
-
-        return array;
-    }
-
-    public static findOccurenceList<T>(source: LinkedNode<T>, target: T): LinkedNode<number> {
-        let list: LinkedNode<number> = new LinkedNode();
-        const head = list;
-        let index: number = 0;
-
-        while(source != null) {
-
-            if(source.value == target) {
-                if(list.value == null)
-                    list.value = index;
-                else {
-                    list.next = new LinkedNode(index);
-                    list = list.next;
-                }
-            }
-
-            source = source.next;
-            index++;
-        }
-
-        return head;
-    }
-    
+    return head;
 }
-
+    
 function arraysEqual<T>(a: T[], b: T[]) {
   if (a === b) return true;
   if (a == null || b == null) return false;
@@ -74,7 +36,7 @@ function arraysEqual<T>(a: T[], b: T[]) {
 
 function assertionHelper(input: number[], target: number, expected: number[]) {
     const result: number[] = LinkedNode.toArray(
-        LinkedNode.findOccurenceList(
+        findOccurenceList(
             LinkedNode.fromArray(input),
             target
         )

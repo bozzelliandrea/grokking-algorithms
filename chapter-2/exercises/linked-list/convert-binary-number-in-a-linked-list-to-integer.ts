@@ -2,17 +2,15 @@
 // Convert the given linkedlist with binary number (0 and 1) to a decimal number
 // input example: [1,0,1] | output expected: 5
 
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
-*/
+//  Definition for singly-linked list.
+ class ListNode {
+     val: number
+     next: ListNode | null
+     constructor(val?: number, next?: ListNode | null) {
+         this.val = (val===undefined ? 0 : val)
+         this.next = (next===undefined ? null : next)
+     }
+ }
  
 // Optimal solution
 // TC: O(n) where n is the size of the linked list

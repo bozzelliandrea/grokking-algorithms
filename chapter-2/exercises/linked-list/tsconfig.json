@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "noImplicitReturns": true,
+      "esModuleInterop": true,
+      "declaration": true,
+      "target": "ES2022",
+      "module": "NodeNext",
+      "moduleResolution": "node"
+    },
+    "include": ["./"],
+  }

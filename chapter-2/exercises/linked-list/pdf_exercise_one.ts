@@ -1,32 +1,9 @@
-
-class LNode<T> {
-
-    value: T;
-    next: LNode<T> | null;
-
-    constructor(value: T, node: LNode<T> | null) {
-        this.value = value;
-        this.next = node;
-    }
-}
-
-class LinkedList<T> {
-    head: LNode<T>;
-    tail: LNode<T>;
-
-    constructor(value: T) {
-        this.head = new LNode(value, null);
-        this.tail = this.head;
-    }
-
-    public add(value: T) {
-        this.tail.next = new LNode(value, null);
-        this.tail = this.tail.next;
-    }
-}
-
 //Test whether a particular item is in a linked list. So if the item is 4 and the list is [1,4,2,5],
 //the method returns true; if the item is 6 and the list is [1,4,2,5], the method returns false.
+
+import LinkedList from "./linked-list";
+import LinkedNode from "./linked-node";
+import Assert from "./assert";
 
 function exercise_one(target: number): boolean{
 
@@ -34,7 +11,7 @@ function exercise_one(target: number): boolean{
     linkedlist.add(2);
     linkedlist.add(3);
 
-    let head: LNode<number> | null = linkedlist.head;
+    let head: LinkedNode<number> | null = linkedlist.head;
 
     while(head != null) {
         if(target === head.value) {
@@ -46,14 +23,7 @@ function exercise_one(target: number): boolean{
     return false;
 }
 
-function assertionHelper(target: number) {
-    if(exercise_one(target))
-        console.log("TARGET FOUND!");
-    else
-        console.error("NOT FOUND!!!")
-}
-
-assertionHelper(2);
-assertionHelper(3);
-assertionHelper(5);
-assertionHelper(0);
+Assert.assertTrue(exercise_one(2))
+Assert.assertFalse(exercise_one(0))
+Assert.assertFalse(exercise_one(5))
+Assert.assertTrue(exercise_one(3))
