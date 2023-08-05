@@ -1,6 +1,7 @@
-import Assert from "./assert";
-import LinkedNode from "./linked-node";
+import Assert from "../assert";
+import LinkedNode from "../linked-node";
 
+export function fourteen(){
 /*
 Merge two ascending sorted linked lists of numbers, including in the final list only those numbers that occur in both lists.
 So if the lists are 
@@ -15,7 +16,7 @@ considering lla.length as n and llb.length as m
 TC: O(n + m) 
 SC: O(n) => O(min(n, m)) if all the values are equal, N will be the minmum length of shortest linkedlist.
 */
-function fourteen(lla: LinkedNode<number>, llb: LinkedNode<number>): LinkedNode<number> {
+function main(lla: LinkedNode<number>, llb: LinkedNode<number>): LinkedNode<number> {
 
     if(!lla || !llb)
         return new LinkedNode();
@@ -45,7 +46,7 @@ function fourteen(lla: LinkedNode<number>, llb: LinkedNode<number>): LinkedNode<
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            fourteen(
+            main(
                 LinkedNode.fromArray([1,3,4,7,12]),
                 LinkedNode.fromArray([1,5,7,9]),
             )
@@ -57,7 +58,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            fourteen(
+            main(
                 LinkedNode.fromArray([1,3,4,7,12]),
                 LinkedNode.fromArray([3,5,7,9]),
             )
@@ -70,7 +71,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            fourteen(
+            main(
                 LinkedNode.fromArray([]),
                 LinkedNode.fromArray([3,5,7,9]),
             )
@@ -82,7 +83,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            fourteen(
+            main(
                 LinkedNode.fromArray([1,3,4,7,12]),
                 LinkedNode.fromArray([23,25,29]),
             )
@@ -90,3 +91,4 @@ Assert.assertTrue(
         []
     )
 )
+}

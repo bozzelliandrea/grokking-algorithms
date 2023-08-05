@@ -1,6 +1,7 @@
-import Assert from "./assert";
-import LinkedNode from "./linked-node";
+import Assert from "../assert";
+import LinkedNode from "../linked-node";
 
+export function thirteen(){
 /*
 Merge two linked lists of numbers, 
 but if a number occurs in both lists, only include it once in the final list.
@@ -13,7 +14,7 @@ and
 The result is [1,3,4,5,7,9,12].
 */
 
-function thirteen(lla: LinkedNode<number>, llb: LinkedNode<number>): LinkedNode<number> {
+function main(lla: LinkedNode<number>, llb: LinkedNode<number>): LinkedNode<number> {
 
     if(!lla || !llb)
         return lla ?? llb;
@@ -69,7 +70,7 @@ function thirteen(lla: LinkedNode<number>, llb: LinkedNode<number>): LinkedNode<
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 LinkedNode.fromArray([1,3,4,7,12]),
                 LinkedNode.fromArray([1,5,7,9]),
             )
@@ -81,7 +82,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 LinkedNode.fromArray([1,3,4,7,12]),
                 LinkedNode.fromArray([1,3,7,9]),
             )
@@ -93,7 +94,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 LinkedNode.fromArray([1,3,4,7,12,12,12,12]),
                 LinkedNode.fromArray([1,3,7,9]),
             )
@@ -105,7 +106,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 LinkedNode.fromArray([1,1,1,1,3,4,7,12,12,12,12]),
                 LinkedNode.fromArray([1,1,3,7,9]),
             )
@@ -117,7 +118,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 LinkedNode.fromArray([]),
                 LinkedNode.fromArray([1,4,5,7,9])
             )
@@ -129,7 +130,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 LinkedNode.fromArray([1]),
                 LinkedNode.fromArray([])
             )
@@ -141,7 +142,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 LinkedNode.fromArray([]),
                 LinkedNode.fromArray([])
             )
@@ -153,7 +154,7 @@ Assert.assertTrue(
 Assert.assertTrue(
     Assert.arraysEqual(
         LinkedNode.toArray(
-            thirteen(
+            main(
                 null,
                 null
             )
@@ -161,3 +162,4 @@ Assert.assertTrue(
         []
     )
 );
+}

@@ -1,6 +1,7 @@
-import LinkedList from "./linked-list";
-import Assert from "./assert";
+import LinkedList from "../linked-list";
+import Assert from "../assert";
 
+export function two_three(){
 // Delete the first occurrence of an item from a linked list. \
 // So if the item is 7 and the list is [1,3,7,4,3,7,2], the result is [1,3,4,3,7,2]
 
@@ -51,3 +52,4 @@ Assert.assertLinkedList(deleteOccurence([1,2,3,4,5,6,4,5,4], 4, true), LinkedLis
 
 Assert.assertLinkedList(deleteOccurence([1,2,3,4,5,6,4,5,4], 4), LinkedList.fromArray([1,2,3,5,6,5]));
 Assert.assertLinkedList(deleteOccurence([1,2,3,2,5,2,2,6,2], 2), LinkedList.fromArray([1,3,5,6]));
+}
