@@ -25,6 +25,10 @@ export default class LinkedNode<T> {
     }
 
     public static toArray<T>(source: LinkedNode<T>): T[] {
+
+        if(source == null)
+            return [];
+
         const array: T[] = [];
 
         while(source != null && source.value != null) {
