@@ -8,6 +8,9 @@
  *         this.next = (next===undefined ? null : next)
  *     }
  * }
+
+ TC: O(n)
+ SC: O(1)
  */
 
 function findMiddle(head: ListNode): ListNode {
