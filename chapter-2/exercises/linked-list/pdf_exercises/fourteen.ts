@@ -14,7 +14,7 @@ The result is [1,7].
 considering lla.length as n and llb.length as m
 
 TC: O(n + m) 
-SC: O(n) => O(min(n, m)) if all the values are equal, N will be the minmum length of shortest linkedlist.
+SC: O(1), we don't create new node for every value, but we create just a new node to point to the next in memory nodes
 */
 function main(lla: LinkedNode<number>, llb: LinkedNode<number>): LinkedNode<number> {
 
