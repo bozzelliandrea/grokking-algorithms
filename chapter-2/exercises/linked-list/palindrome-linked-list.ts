@@ -13,6 +13,7 @@
  SC: O(1)
  */
 
+// fast and slow pointer technique
 function findMiddle(head: ListNode): ListNode {
 
     let slow: ListNode = head;
@@ -26,6 +27,7 @@ function findMiddle(head: ListNode): ListNode {
     return slow;
 }
 
+// reverse a singly linked list
 function reverse(head: ListNode): ListNode {
     let curr = head;
     let prev = null;
