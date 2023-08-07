@@ -42,6 +42,10 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 
     for(let rowIdx = 0; rowIdx < matrix.length; rowIdx++) {
         const row = matrix[rowIdx];
+
+        if(row[row.length - 1] < target)
+            continue;
+        
         if(row[0] <= target && row[row.length - 1] >= target)
             return binarySearch(row, target) != -1;
 
