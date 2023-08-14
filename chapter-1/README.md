@@ -38,6 +38,10 @@ Step to step explanation
   <img src="https://github.com/bozzelliandrea/grokking-algorithms/assets/74464364/e2f4fc95-b10c-4426-95fe-f7a7934e6621" />
 </p>
 
+LeetCode & CP Binary Search template: 
+
+https://leetcode.com/discuss/general-discussion/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems
+
 ### Big O
 
 BigO notation is a special notation used to calculate algorithm running time, it doesen't use constant values (only the 1 for the constat time/space complexity) and it's used to specify the **worst** case scenario.
