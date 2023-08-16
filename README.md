@@ -6,4 +6,4 @@
 </p>
 
 
-Notes and Exercices about the book Grokking Algorithms - An illustrated guide for programmers and other curious people
+Notes and Exercises about the book Grokking Algorithms - An illustrated guide for programmers and other curious people
