@@ -62,7 +62,7 @@ An undirected graph doesn’t have any arrows, and both nodes are each other’s
 
 Queue tips:
 enqueue => push
-dequeue => pop
+dequeue => shift
 
 ```
 search_queue = new Queue()                // Create a new queue
